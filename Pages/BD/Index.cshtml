@@ -1,0 +1,22 @@
+﻿@page
+@model Produkt.Pages.BD.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Baza danych</h1>
+
+
+<div class="card-columns">
+    @foreach (var product in Model.Product)
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@product.Image');">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@product.Title</h5>
+            </div>
+        </div>
+    }
+</div>
